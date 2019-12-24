@@ -14,3 +14,6 @@ clean:
 
 deploy: clean 2k20
 	scp -q ./2k20 pi@pi-zero-wh.local:
+
+run:
+	go run ./cmd/2k20/main_darwin.go
