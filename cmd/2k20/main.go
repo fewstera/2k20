@@ -20,6 +20,7 @@ func main() {
 	config := &rgbmatrix.DefaultConfig
 	config.Rows = 16
 	config.HardwareMapping = "adafruit-hat"
+	config.Brightness = 55
 	m, _ := rgbmatrix.NewRGBLedMatrix(config)
 	c := rgbmatrix.NewCanvas(m)
 	defer c.Close() // don't forgot close the Matrix, if not your leds will remain ono
@@ -34,6 +35,6 @@ func main() {
 
 		// don't forget call Render to display the new led status
 		c.Render()
-		time.Sleep(time.Duration(25) * time.Millisecond)
+		time.Sleep(time.Duration(10) * time.Millisecond)
 	}
 }
